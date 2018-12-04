@@ -20,4 +20,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" />
+    android:padding="@dimen/main_activity_root_padding"
+    tools:context=".MainActivity">
+
+    <!-- plain text -->
+    <EditText
+        android:id="@+id/main_activity_edit_text_plain_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_activity_edit_text_plain_text_hint"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <!-- encrypt and decrypt buttons -->
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- encrypt button -->
+        <Button
+            android:id="@+id/main_activity_button_encrypt"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickDoEncrypt"
+            android:text="@string/main_activity_button_encrypt" />
+
+        <!-- decrypt button -->
+        <Button
+            android:id="@+id/main_activity_button_decrypt"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickDoDecrypt"
+            android:text="@string/main_activity_button_decrypt" />
+
+    </LinearLayout>
+
+    <!-- encrypted data -->
+    <LinearLayout
+        android:id="@+id/main_activity_linear_layout_encrypted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_text_view_encrypted_label" />
+
+        <TextView
+            android:id="@+id/main_activity_text_view_encrypted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+
+    <!-- nonce -->
+    <LinearLayout
+        android:id="@+id/main_activity_linear_layout_nonce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_activity_text_view_nonce_label" />
+
+        <TextView
+            android:id="@+id/main_activity_text_view_nonce"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+
+</LinearLayout>

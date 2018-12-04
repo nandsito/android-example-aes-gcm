@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   - Copyright 2018 nandsito
   -
@@ -15,10 +16,5 @@
   -->
 
 <resources>
-    <string name="app_name">aes-gcm</string>
-    <string name="main_activity_edit_text_plain_text_hint">Plain text</string>
-    <string name="main_activity_button_encrypt">Encrypt</string>
-    <string name="main_activity_button_decrypt">Decrypt</string>
-    <string name="main_activity_text_view_encrypted_label">Encrypted:\u0020</string>
-    <string name="main_activity_text_view_nonce_label">Nonce:\u0020</string>
+    <dimen name="main_activity_root_padding">20dp</dimen>
 </resources>
